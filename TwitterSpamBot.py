@@ -63,12 +63,13 @@ def main():
 
     looper = 0
     status = 0
+    holder = how_much_to_spam
     while looper < 5:
         current_time = str(datetime.now())
         clock = current_time[11:16]
-        i = 0
+        
         if clock == '01:00' or clock == '10:00' or clock == '13:00' or clock == '18:00':
-            while (i < how_much_to_spam):
+            while (0 < how_much_to_spam):
                 # Making the request
                 payload = string_define()
                 response = oauth.post(
@@ -86,7 +87,9 @@ def main():
                 # Saving the response as JSON
                 json_response = response.json()
                 print(json.dumps(json_response, indent=4, sort_keys=True))
-                i = i + 1
+                how_much_to_spam = how_much_to_spam - 1
+        elif clock == '01:01' or clock == '10:01' or clock == '13:01' or clock == '18:01':
+            how_much_to_spam = holder
                 
         if status == 0:
             print("Started the loop")
