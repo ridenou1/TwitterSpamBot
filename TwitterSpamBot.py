@@ -6,10 +6,11 @@ import random
 from time import sleep
 from requests_oauthlib import OAuth1Session
 
-how_much_to_spam = 50
+# How much to spam variable moved to line 13
 
 
 def main():
+    how_much_to_spam = 50
     print(datetime.now())
 
     consumer_key = os.environ.get("CONSUMER_KEY")
