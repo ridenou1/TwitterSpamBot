@@ -1,4 +1,6 @@
 # TwitterSpamBot
+Originally made for Purdue ACM SIGBots, April 2022.
+
 Some notes on operation:
 
 1. You're going to have to create a Twitter account that's been approved for developer mode WITH elevated permission levels.
@@ -19,4 +21,3 @@ _export 'CONSUMER_SECRET'=_'<place consumer/api secret key here>'
   
 _python3 TwitterSpamBot.py_
   
-If you have any questions, please feel free to @ me in the Discord. I'll be making this repo private after Wednesday.
