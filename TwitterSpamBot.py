@@ -7,7 +7,7 @@ from time import sleep
 from requests_oauthlib import OAuth1Session
 
 def main():
-    how_much_to_spam = 2
+    how_much_to_spam = 50
     print(datetime.now())
 
     consumer_key = os.environ.get("CONSUMER_KEY")
