@@ -1,7 +1,12 @@
 # TwitterSpamBot
 Originally made for Purdue ACM SIGBots, April 2022.
 
-Some notes on operation:
+## A Note On Longevity
+This will still send messages to an X account. However, since Musk has purchased the platform, the amount you can spam the platform with messages such as this is extremely limited, and the code will result in an error when you try to run it as is.
+
+You are welcome to reference the code as much as you would like for a non-spamming X API, but this code no longer works for it's intended purpose as of 2024.
+
+## Operational Notes
 
 1. You're going to have to create a Twitter account that's been approved for developer mode WITH elevated permission levels.
 2. I would advise that you leave the how_much_to_spam at 50 or lower so that your Twitter account doesn't get flagged as a spam bot. 50 itself may be too high, I don't know. This variable is declared on line 9.
@@ -21,3 +26,9 @@ _export 'CONSUMER_SECRET'=_'<place consumer/api secret key here>'
   
 _python3 TwitterSpamBot.py_
   
+## Requires Python Packages
+- datetime
+- requests_oauthlib
+- time
+- json
+- os

@@ -1,10 +1,11 @@
-
 from datetime import datetime
 import os
 import json
-import random
 from time import sleep
 from requests_oauthlib import OAuth1Session
+
+# Originally written April 2022.
+## SEE README ABOUT CURRENT ABILITY TO SPAM X (TWITTER) AS OF 2024.
 
 def main():
     how_much_to_spam = 50
@@ -62,7 +63,7 @@ def main():
     while looper < 5:
         current_time = str(datetime.now())
         clock = current_time[11:16]
-        if clock == '01:00' or clock == '10:00' or clock == '13:00' or clock == '18:00' or clock == '22:00':
+        if clock == '01:00' or clock == '10:00' or clock == '13:00' or clock == '18:00' or clock == '22:00' or clock == '08:20':
             # Currently only built to support the hard-coded messages.
             while (how_much_to_spam > 0):
                 # Making the request
@@ -83,7 +84,7 @@ def main():
                 json_response = response.json()
                 print(json.dumps(json_response, indent=4, sort_keys=True))
                 how_much_to_spam = how_much_to_spam - 1
-        elif clock == '1:01' or clock == '10:01' or clock == '13:01' or clock == '18:01' or clock == '22:01':
+        elif clock == '1:01' or clock == '10:01' or clock == '13:01' or clock == '18:01' or clock == '22:01' or clock == '08:21':
             how_much_to_spam = holder
 
                 
@@ -204,7 +205,7 @@ def predefined_strings(num):
     # msg = cased_msg[num] + " #PurdueACMSIGBOTS #PurdueDayOfGiving"
 
     # Randomized message option
-    msg = "I support Purdue SIGBots, but I have graduated and now work, so I can't write funny messages one hour before the tweet drops. Tweet " + str(num) + " for this minute " + str(datetime.now()) + " #PurdueACMSIGBots #PurdueDayOfGiving"
+    msg = "I support Purdue SIGBots, but I have graduated and now work, so I can't write funny messages one hour before the tweet drops. Tweet " + str(num) + " for this minute " + str(datetime.now()) + " #PurdueSIGBots #PurdueDayOfGiving"
     
     payload = {"text": msg}
     return payload
